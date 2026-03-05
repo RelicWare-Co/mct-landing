@@ -88,13 +88,50 @@ function App() {
 
         {/* Mobile Nav Dropdown */}
         {mobileMenuOpen && (
-          <div className="mobile-menu">
-             <button onClick={() => scrollToSection('inicio')} className="nav-link">Inicio</button>
-             <button onClick={() => scrollToSection('servicios')} className="nav-link">Servicios</button>
-             <button onClick={() => scrollToSection('nosotros')} className="nav-link">Nosotros</button>
-             <button onClick={() => scrollToSection('equipo')} className="nav-link">Equipo</button>
-             <button onClick={() => scrollToSection('contacto')} className="btn btn-primary" style={{ width: '100%', marginTop: '0.5rem' }}>Contáctanos</button>
-          </div>
+          <motion.div 
+            className="mobile-menu"
+            initial={{ opacity: 0, y: -10, scaleY: 0.95 }}
+            animate={{ opacity: 1, y: 0, scaleY: 1 }}
+            exit={{ opacity: 0, y: -10, scaleY: 0.95 }}
+            transition={{ duration: 0.2, ease: [0.4, 0, 0.2, 1] }}
+          >
+             <motion.button 
+               onClick={() => scrollToSection('inicio')} 
+               className="nav-link"
+               initial={{ opacity: 0, x: -20 }}
+               animate={{ opacity: 1, x: 0 }}
+               transition={{ delay: 0.05 }}
+             >Inicio</motion.button>
+             <motion.button 
+               onClick={() => scrollToSection('servicios')} 
+               className="nav-link"
+               initial={{ opacity: 0, x: -20 }}
+               animate={{ opacity: 1, x: 0 }}
+               transition={{ delay: 0.1 }}
+             >Servicios</motion.button>
+             <motion.button 
+               onClick={() => scrollToSection('nosotros')} 
+               className="nav-link"
+               initial={{ opacity: 0, x: -20 }}
+               animate={{ opacity: 1, x: 0 }}
+               transition={{ delay: 0.15 }}
+             >Nosotros</motion.button>
+             <motion.button 
+               onClick={() => scrollToSection('equipo')} 
+               className="nav-link"
+               initial={{ opacity: 0, x: -20 }}
+               animate={{ opacity: 1, x: 0 }}
+               transition={{ delay: 0.2 }}
+             >Equipo</motion.button>
+             <motion.button 
+               onClick={() => scrollToSection('contacto')} 
+               className="btn btn-primary" 
+               style={{ width: '100%', marginTop: '0.75rem' }}
+               initial={{ opacity: 0, y: 10 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ delay: 0.25 }}
+             >Contáctanos</motion.button>
+          </motion.div>
         )}
       </nav>
 

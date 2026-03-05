@@ -243,26 +243,34 @@ a:hover {
 .mobile-menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
-  background-color: var(--bg-surface-elevated);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 1.5rem;
-  border-bottom: 1px solid var(--border-light);
+  left: 1rem;
+  right: 1rem;
+  background-color: var(--bg-color);
+  padding: 1rem 1.5rem 1.5rem;
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-md);
-  border-top: 1px solid var(--border-light);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform-origin: top;
+  will-change: transform, opacity;
 }
 
 .mobile-menu .nav-link {
   font-size: 1.125rem;
-  padding: 1rem 0.5rem;
+  padding: 0.875rem 1rem;
   border-bottom: 1px solid var(--border-light);
   width: 100%;
   text-align: left;
-  border-radius: 0;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+}
+
+.mobile-menu .nav-link:hover {
+  background-color: var(--bg-subtle);
+  color: var(--primary);
+  padding-left: 1.25rem;
 }
 
 .mobile-menu .nav-link:last-of-type {
