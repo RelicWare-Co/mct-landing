@@ -4,6 +4,7 @@ import { Badge } from '../ui/Badge';
 import { Button } from '../ui/Button';
 import { fadeInUp, staggerContainer } from '../../lib/animations';
 import { heroContent } from '../../data/content';
+import { HeroCanvas } from '../ui/HeroCanvas';
 
 export function Hero() {
   const { scrollToSection } = useScroll();
@@ -11,11 +12,16 @@ export function Hero() {
 
   return (
     <section id="inicio" className="hero">
-      <div className="container">
+      <div className="hero-canvas-wrapper absolute-bg">
+        <HeroCanvas />
+      </div>
+      
+      <div className="container relative z-10">
         <motion.div 
           initial="hidden" 
           animate="visible" 
           variants={prefersReducedMotion ? {} : staggerContainer}
+          className="hero-content"
         >
           <motion.div variants={prefersReducedMotion ? {} : fadeInUp}>
             <Badge>{heroContent.badge}</Badge>
