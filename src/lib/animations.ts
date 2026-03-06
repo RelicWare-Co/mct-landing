@@ -5,7 +5,7 @@ export const EASING = {
   easeOutQuart: [0.25, 1, 0.5, 1],  // Smooth, refined
   easeOutQuint: [0.22, 1, 0.36, 1], // Slightly snappier
   easeOutExpo: [0.16, 1, 0.3, 1],   // Confident, decisive
-};
+} as const;
 
 export const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 30 },
