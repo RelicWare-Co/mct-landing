@@ -14,18 +14,16 @@ export function Services() {
           variants={staggerContainer}
         >
           <div style={{ 
-            textAlign: 'center', 
             marginBottom: '4rem', 
-            maxWidth: '700px', 
-            margin: '0 auto 4rem' 
+            maxWidth: '800px'
           }}>
             <motion.h2 
               variants={fadeInUp} 
-              style={{ fontSize: '2.5rem', marginBottom: '1rem' }}
+              style={{ fontSize: '3.5rem', marginBottom: '1.5rem', letterSpacing: '-0.03em' }}
             >
               {servicesContent.title}
             </motion.h2>
-            <motion.p variants={fadeInUp}>
+            <motion.p variants={fadeInUp} style={{ fontSize: '1.25rem' }}>
               {servicesContent.description}
             </motion.p>
           </div>

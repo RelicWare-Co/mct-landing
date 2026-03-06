@@ -15,26 +15,25 @@ export function Team() {
           variants={staggerContainer}
         >
           <div style={{ 
-            textAlign: 'center', 
-            maxWidth: '700px', 
-            margin: '0 auto 4rem' 
+            maxWidth: '800px', 
+            margin: '0 0 4rem 0'
           }}>
             <Badge>{teamContent.badge}</Badge>
             <motion.h2 
               variants={fadeInUp} 
-              style={{ fontSize: '2.5rem', marginBottom: '1rem' }}
+              style={{ fontSize: '3.5rem', marginBottom: '1.5rem', letterSpacing: '-0.03em' }}
             >
               {teamContent.title}
             </motion.h2>
-            <motion.p variants={fadeInUp}>
+            <motion.p variants={fadeInUp} style={{ fontSize: '1.25rem' }}>
               {teamContent.description}
             </motion.p>
           </div>
 
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', 
-            gap: '3rem' 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
+            gap: '4rem 3rem' 
           }}>
             {teamMembers.map((member) => (
               <TeamMemberCard

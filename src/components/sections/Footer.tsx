@@ -30,8 +30,8 @@ export function Footer() {
     <footer className="footer">
       <div className="container">
         <div 
-          className="grid-features" 
           style={{ 
+            display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', 
             gap: '3rem' 
           }}

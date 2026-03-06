@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import type { LucideIcon } from 'lucide-react';
-import { fadeInUp } from '../../lib/animations';
+import { fadeInUp, EASING } from '../../lib/animations';
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -9,13 +9,22 @@ interface ServiceCardProps {
 }
 
 export function ServiceCard({ icon: Icon, title, description }: ServiceCardProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
-    <motion.div variants={fadeInUp} className="card">
-      <div className="card-icon-wrapper">
-        <Icon size={24} />
+    <motion.div 
+      variants={fadeInUp} 
+      className="service-row"
+      whileHover={prefersReducedMotion ? {} : { scale: 1.02 }}
+      transition={{ duration: 0.3, ease: EASING.easeOutQuart }}
+    >
+      <div className="service-row-header">
+        <div className="service-icon-wrapper">
+          <Icon size={32} />
+        </div>
+        <h3 className="service-title">{title}</h3>
       </div>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <p className="service-description">{description}</p>
     </motion.div>
   );
 }

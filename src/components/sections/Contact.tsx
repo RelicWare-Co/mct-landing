@@ -33,8 +33,7 @@ export function Contact() {
     <section id="contacto" className="section bg-subtle">
       <div className="container">
         <motion.div 
-          className="grid-features" 
-          style={{ gap: '4rem' }}
+          className="grid-split" 
           initial="hidden" 
           whileInView="visible" 
           viewport={{ once: true, margin: "-100px" }}
@@ -42,10 +41,10 @@ export function Contact() {
         >
           <motion.div variants={fadeInUp}>
             <Badge>{contactContent.badge}</Badge>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
+            <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', letterSpacing: '-0.03em' }}>
               {contactContent.title}
             </h2>
-            <p style={{ marginBottom: '3rem' }}>
+            <p style={{ marginBottom: '3rem', fontSize: '1.25rem' }}>
               {contactContent.description}
             </p>
             
