@@ -2,9 +2,9 @@ import type { Variants } from 'framer-motion';
 
 // Refined, natural deceleration easing curves according to motion guidelines 
 export const EASING = {
-  easeOutQuart: [0.25, 1, 0.5, 1],  // Smooth, refined
-  easeOutQuint: [0.22, 1, 0.36, 1], // Slightly snappier
-  easeOutExpo: [0.16, 1, 0.3, 1],   // Confident, decisive
+  easeOutQuart: [0.25, 1, 0.5, 1] as const,  // Smooth, refined
+  easeOutQuint: [0.22, 1, 0.36, 1] as const, // Slightly snappier
+  easeOutExpo: [0.16, 1, 0.3, 1] as const,   // Confident, decisive
 };
 
 export const fadeInUp: Variants = {

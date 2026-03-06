@@ -1,9 +1,9 @@
-import { type ButtonHTMLAttributes, type ReactNode } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { type ReactNode } from 'react';
+import { motion, useReducedMotion, type HTMLMotionProps } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { EASING } from '../../lib/animations';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: 'primary' | 'secondary';
   showArrow?: boolean;
   children: ReactNode;
